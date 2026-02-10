@@ -81,8 +81,11 @@ DATABASES = {
         'NAME': 'ai_meme_db',
         'USER': 'ai_meme_user',
         'PASSWORD': 'chetan123',
-        'HOST': 'localhost',   # Docker: postgres
+        'HOST': 'localhost',
         'PORT': '5432',
+        'OPTIONS': {
+            'options': '-c search_path=ai_meme_schema'
+        }
     }
 }
 
